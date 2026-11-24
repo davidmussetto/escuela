@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conocé las propuestas de educación superior y formación profesional de Brandsen.">
+  <title>Estudiar en Brandsen | Educación y formación</title>
+  <style>
+    :root{--ink:#172b25;--muted:#5c6d65;--green:#176b4b;--green2:#dff1e7;--cream:#f7f7f1;--gold:#e9b949;--white:#fff;--shadow:0 14px 38px rgba(22,49,37,.10)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+    a{color:inherit} .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e7ece7}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:850;letter-spacing:-.04em;font-size:1.15rem}.brand span{color:var(--green)}
+    nav{display:flex;gap:22px;align-items:center}nav a{text-decoration:none;font-size:.92rem;font-weight:650;color:#43564d}nav a:hover{color:var(--green)}
+    .menu{display:none;border:0;background:var(--green);color:white;border-radius:10px;padding:9px 12px;font-size:1rem}
+    .hero{position:relative;min-height:590px;display:grid;align-items:center;color:white;background:linear-gradient(90deg,rgba(9,37,27,.88),rgba(9,37,27,.48)),url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .hero-content{max-width:720px;padding:90px 0}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:7px 13px;border-radius:99px;font-size:.82rem;font-weight:700;letter-spacing:.04em}
+    h1{font-size:clamp(2.7rem,6vw,5.2rem);line-height:1.02;letter-spacing:-.055em;margin:24px 0}.hero p{font-size:1.15rem;max-width:600px;color:#edf5ef}
+    .btn{display:inline-block;text-decoration:none;background:var(--gold);color:#1d3028;font-weight:800;padding:13px 20px;border-radius:12px;margin-top:18px;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+    section{padding:82px 0}.section-head{max-width:700px;margin-bottom:34px}.kicker{color:var(--green);font-size:.78rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
+    h2{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.045em;line-height:1.12;margin:9px 0 14px}.lead{color:var(--muted);font-size:1.08rem}
+    .intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+    .intro-img{width:100%;height:360px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow)}
+    .stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px}.stat strong{display:block;color:var(--green);font-size:1.55rem}.stat span{font-size:.86rem;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:white;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s}.card:hover{transform:translateY(-5px)}
+    .card img{width:100%;height:205px;object-fit:cover}.card-body{padding:25px;display:flex;flex-direction:column;flex:1}
+    .tag{display:inline-block;width:max-content;background:var(--green2);color:var(--green);padding:5px 10px;border-radius:99px;font-size:.75rem;font-weight:800}
+    h3{font-size:1.4rem;line-height:1.2;margin:14px 0 9px;letter-spacing:-.025em}.card p{color:var(--muted);margin:0 0 15px}
+    .card ul{padding-left:19px;color:#42564b;margin:0 0 20px}.card li{margin:5px 0}.more{margin-top:auto;color:var(--green);font-weight:800;text-decoration:none}.more:hover{text-decoration:underline}
+    .audio-section{background:#eaf2eb}.audio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .audio-card{background:white;padding:22px;border-radius:18px;box-shadow:0 8px 24px rgba(22,49,37,.07)}
+    .audio-card h3{font-size:1.12rem;margin:0 0 6px}.audio-card p{color:var(--muted);font-size:.9rem;margin:0 0 15px}
+    audio{width:100%;height:42px;accent-color:var(--green)}
+    .note{font-size:.86rem;color:var(--muted);margin-top:18px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{border-top:3px solid var(--gold);padding:20px 5px}.step b{font-size:1.1rem}.step p{color:var(--muted);margin-bottom:0}
+    .cta{background:var(--green);color:white;border-radius:26px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:2rem;margin:0 0 8px}.cta p{color:#e0eee6;margin:0}.cta .btn{white-space:nowrap}
+    footer{background:#142c23;color:#dce9e0;padding:36px 0}.footer-row{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-row p{margin:5px 0;color:#b8c9bf;font-size:.9rem}
+    .sources{font-size:.82rem;color:#b8c9bf;margin-top:20px}.sources a{color:#dce9e0}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:850px){.cards,.audio-grid{grid-template-columns:1fr 1fr}.intro-grid{grid-template-columns:1fr}.intro-img{height:300px}.steps{grid-template-columns:1fr}}
+    @media(max-width:620px){.nav{height:64px}nav{display:none;position:absolute;top:64px;left:0;right:0;background:white;padding:18px 5%;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}.hero{min-height:560px}.hero-content{padding:70px 0}section{padding:62px 0}.cards,.audio-grid{grid-template-columns:1fr}.cta{padding:28px;display:block}.cta .btn{margin-top:20px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">BRANDSEN<span>.</span> ESTUDIA</div>
+    <button class="menu" id="menuBtn" aria-label="Abrir menú">☰</button>
+    <nav id="nav">
+      <a href="#propuestas">Instituciones</a><a href="#audios">Escuchá</a><a href="#orientacion">Cómo empezar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-content">
+      <span class="eyebrow">FORMACIÓN · OPORTUNIDADES · FUTURO</span>
+      <h1>Tu próximo paso<br>puede empezar acá.</h1>
+      <p>En Brandsen hay propuestas para seguir estudiando, aprender un oficio y desarrollar nuevas oportunidades. Conocé algunas de las opciones de formación de nuestra comunidad.</p>
+      <a class="btn" href="#propuestas">Conocer las propuestas ↓</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap intro-grid reveal">
+      <div>
+        <span class="kicker">Educación cerca tuyo</span>
+        <h2>Estudiar también es construir comunidad.</h2>
+        <p class="lead">La formación no termina con la escuela secundaria. En nuestra ciudad y la zona existen instituciones que ofrecen carreras, capacitaciones y herramientas para el mundo del trabajo.</p>
+        <p>Hay caminos distintos: formarse como docente o técnico superior, aprender sobre producción agropecuaria y alimentos, o capacitarse en un oficio. Lo importante es encontrar una propuesta que se conecte con tus intereses y proyectos.</p>
+        <div class="stats">
+          <div class="stat"><strong>3</strong><span>espacios de formación</span></div>
+          <div class="stat"><strong>+16</strong><span>años: edad habitual en cursos del CEA*</span></div>
+          <div class="stat"><strong>∞</strong><span>posibilidades para aprender</span></div>
+        </div>
+      </div>
+      <img class="intro-img" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1100&q=85" alt="Estudiantes compartiendo una experiencia de aprendizaje">
+    </div>
+  </section>
+
+  <section id="propuestas">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Opciones para tu futuro</span>
+        <h2>Tres espacios, distintos caminos.</h2>
+        <p class="lead">Conocé qué tipo de formación ofrece cada institución. La disponibilidad de carreras y cursos puede cambiar según el ciclo lectivo.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85" alt="Aula de formación docente">
+          <div class="card-body">
+            <span class="tag">Educación superior</span>
+            <h3>Instituto Superior N.º 49</h3>
+            <p>El ISFDyT N.º 49 “Alcides Villano” brinda formación docente y técnica superior en Brandsen. Es una alternativa para quienes buscan una carrera de nivel superior y una preparación profesional.</p>
+            <ul>
+              <li>Profesorados: Inicial, Primaria, Educación Física y distintas áreas del nivel secundario.</li>
+              <li>Tecnicaturas vinculadas con salud, acompañamiento terapéutico y administración, entre otras.</li>
+              <li>La oferta concreta depende de cada ciclo lectivo.</li>
+            </ul>
+            <a class="more" href="https://isfd49-bue.infd.edu.ar/sitio/" target="_blank" rel="noopener">Visitar sitio institucional ↗</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85" alt="Paisaje rural y actividad agropecuaria">
+          <div class="card-body">
+            <span class="tag">Formación agraria</span>
+            <h3>La Rural · CEA N.º 2</h3>
+            <p>En el predio de la Sociedad Rural, sobre la Ruta Provincial 29 km 2, funciona el Centro de Educación Agraria N.º 2. Sus propuestas acercan conocimientos prácticos al sector agroalimentario y productivo.</p>
+            <ul>
+              <li>Capacitaciones relacionadas con huerta y producción agropecuaria.</li>
+              <li>Elaboración de alimentos, conservas, panificados y productos lácteos.</li>
+              <li>Uso y mantenimiento de maquinaria rural, según la oferta.</li>
+            </ul>
+            <a class="more" href="https://www.infobrandsen.com.ar/?s=CEA+2" target="_blank" rel="noopener">Consultar novedades y cursos ↗</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=85" alt="Persona aprendiendo un oficio técnico">
+          <div class="card-body">
+            <span class="tag">Formación para el trabajo</span>
+            <h3>Centro de Formación Profesional N.º 401</h3>
+            <p>La formación profesional permite adquirir habilidades concretas, aprender un oficio y fortalecer las posibilidades de inserción laboral o de desarrollo de un emprendimiento.</p>
+            <ul>
+              <li>Capacitaciones prácticas y orientadas al mundo laboral.</li>
+              <li>Trayectos de oficios y formación técnica.</li>
+              <li>Consultar en la institución cuáles se dictan en el ciclo vigente.</li>
+            </ul>
+            <a class="more" href="https://cfp401brandsen.blogspot.com/" target="_blank" rel="noopener">Consultar información del CFP 401 ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="note">*La referencia a mayores de 16 años corresponde a cursos difundidos por el CEA N.º 2; cada capacitación puede establecer sus propios requisitos. La oferta, sedes, horarios e inscripciones deben confirmarse con cada institución.</p>
+    </div>
+  </section>
+
+  <section class="audio-section" id="audios">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Voces de la comunidad</span>
+        <h2>Escuchá los audios.</h2>
+        <p class="lead">Tres grabaciones para conocer más sobre las propuestas educativas y las experiencias de formación en Brandsen.</p>
+      </div>
+      <div class="audio-grid">
+        <div class="audio-card reveal">
+          <h3>Audio 1 · Testimonio</h3><p>Reproducí la primera grabación.</p>
+          <audio controls preload="metadata"><source src="audios/audio-1.ogg" type="audio/ogg">Tu navegador no puede reproducir audio OGG.</audio>
+        </div>
+        <div class="audio-card reveal">
+          <h3>Audio 2 · Información</h3><p>Reproducí la segunda grabación.</p>
+          <audio controls preload="metadata"><source src="audios/audio-2.ogg" type="audio/ogg">Tu navegador no puede reproducir audio OGG.</audio>
+        </div>
+        <div class="audio-card reveal">
+          <h3>Audio 3 · Experiencias</h3><p>Reproducí la tercera grabación.</p>
+          <audio controls preload="metadata"><source src="audios/audio-3.ogg" type="audio/ogg">Tu navegador no puede reproducir audio OGG.</audio>
+        </div>
+      </div>
+      <p class="note">Podés escuchar cada audio desde el reproductor. Si iniciás uno nuevo, los demás se pausan automáticamente.</p>
+    </div>
+  </section>
+
+  <section id="orientacion">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Primeros pasos</span>
+        <h2>¿Cómo elegir qué estudiar?</h2>
+        <p class="lead">Tomate un momento para pensar qué te interesa y consultá directamente los detalles de cada propuesta.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><b>01 · Identificá tus intereses</b><p>¿Te gusta enseñar, trabajar con tecnología, producir, cuidar, reparar o emprender?</p></div>
+        <div class="step reveal"><b>02 · Consultá la propuesta</b><p>Preguntá por duración, horarios, modalidad, requisitos y certificación.</p></div>
+        <div class="step reveal"><b>03 · Animate a empezar</b><p>Reuní la documentación solicitada y averiguá las fechas de inscripción y vacantes.</p></div>
+      </div>
+      <div class="cta reveal" style="margin-top:50px">
+        <div><h2>Tu futuro también se construye en Brandsen.</h2><p>Informate, preguntá y encontrá el camino de formación que mejor acompañe tus proyectos.</p></div>
+        <a class="btn" href="https://www.brandsen.gob.ar/" target="_blank" rel="noopener">Más información local ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div><strong>BRANDSEN. ESTUDIA</strong><p>Una invitación a conocer las oportunidades de formación de nuestra comunidad.</p></div>
+      <div><strong>Información consultada</strong><p>ISFDyT N.º 49 · CEA N.º 2 · CFP N.º 401</p></div>
+    </div>
+    <div class="sources">
+      Fuentes para ampliar: <a href="https://isfd49-bue.infd.edu.ar/sitio/programas/" target="_blank" rel="noopener">oferta del Instituto 49</a> ·
+      <a href="https://www.infobrandsen.com.ar/2026/03/25/inician-nuevos-cursos-en-el-centro-de-educacion-agraria-n2/" target="_blank" rel="noopener">CEA N.º 2</a> ·
+      <a href="https://cfp401brandsen.blogspot.com/" target="_blank" rel="noopener">CFP N.º 401</a>.
+      Imágenes ilustrativas. Sitios externos y oferta educativa sujetos a actualización.
+    </div>
+    <p class="sources">© <span id="year"></span> · Página informativa.</p>
+  </div>
+</footer>
+
+<script>
+  // Menú adaptable para celulares
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+
+  // Al reproducir un audio, pausa los otros.
+  const players = document.querySelectorAll('audio');
+  players.forEach(player => {
+    player.addEventListener('play', () => {
+      players.forEach(other => { if (other !== player) other.pause(); });
+    });
+  });
+
+  // Aparición suave de las secciones al desplazarse.
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
